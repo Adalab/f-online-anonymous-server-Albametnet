@@ -3,6 +3,7 @@ body {
   margin: 0;
   height: 100%;
 }
+
 .page {
   height: 100vh;
   margin: 0;
@@ -13,25 +14,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 0;
 }
-
-
-
 
 /* HEADER */
 .page__header {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
 }
+
 .nav-trigger {
   background-image: url(../images/ico-menu.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: transparent;
+  font-size: 0;
   width: 35px;
   height: 35px;
   border: 0;
@@ -41,15 +40,22 @@ body {
   top: 20px;
   right: 20px;
 }
+
 .nav-trigger:hover{
-  background-color:#7f8c8d;
-  }
+  background-color:#6D6B6C;
+  border: 1px solid #615E5F;
+}
 
-
-
+.trigger__out {
+  visibility: hidden;
+}
 
 /* MENU */
 .nav {
+  display: none;
+}
+
+.nav__open {
   background-color: #402929;
   opacity: 0.92;
   width: 100%;
@@ -62,6 +68,7 @@ body {
   top:0;
   z-index: 1;
 }
+
 .nav__items {
   padding:0;
   margin: 0;
@@ -72,6 +79,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .nav__item {
   width: 100%;
   text-align: center;
@@ -81,21 +89,24 @@ body {
   font-size: 24px;
   line-height: 60px;
 }
+
 .nav__item:hover{
-background-color: #291A1A;
+  background-color: #291A1A;
 }
+
 .nav__link {
   width: 100%;
   color: white;
   text-decoration: none;
 }
+
 .nav-close {
   height: 35px;
   width: 35px;
   background-image: url(../images/ico-close.svg);
   background-repeat: no-repeat;
   background-position: center;
-  color: transparent;
+  font-size: 0;
   background-color: black;
   position: absolute;
   top: 20px;
@@ -103,20 +114,21 @@ background-color: #291A1A;
   border:0;
   border-radius: 3px;
 }
+
 .nav-close:hover {
   background-color: #1E0E15;
   border: 1px solid #474647;
 }
 
-
-
 /* MAIN */
 .page__main {
 }
+
 .page__wrapper {
   margin-left: 30px;
   margin-right: 30px;
 }
+
 .page__main-title {
   width: 25%;
   margin:0;
@@ -125,9 +137,6 @@ background-color: #291A1A;
   text-align: left;
   text-transform: uppercase;
 }
-
-
-
 
 /* FOOTER */
 .page__footer {
@@ -140,15 +149,15 @@ background-color: #291A1A;
   display: flex;
   justify-content: center;
   position: absolute;
-  left: 30px;
-  right: 30px;
   bottom: 20px;
+  text-align: center;
 }
-.page__footer {}
+
 .page__footer-copy {
   font-family: Arial, Helvetica, sans-serif;
   margin:0;
   color: white;
   text-align: center;
   font-size: 14px;
+  line-height: 30px;
 }
