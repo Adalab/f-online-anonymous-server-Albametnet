@@ -6,6 +6,7 @@ var items = document.querySelector('.nav');
 function showMenu (){
   items.classList.add('nav__open');
   menuIcon.classList.add('trigger__out');
+  items.classList.add('nav__animation');
 }
 function hideMenu() {
   items.classList.remove('nav__open');
